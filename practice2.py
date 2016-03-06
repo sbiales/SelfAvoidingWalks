@@ -41,10 +41,12 @@ while(contin) :
 
     if moves == [] :
         contin = False
+        print("No available moves")
         continue
 
     if steps == 0 :
         contin = False
+        print("No more steps")
         continue
 
     #choose one move at random

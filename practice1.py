@@ -6,11 +6,11 @@ import random
 
 size = 100
 lattice = {}
-cont = True
+contin = True
 
 #Initialize all locations on lattice to "unvisited"
-for x in range(-(size/2), (size/2)) :
-    for y in range(-(size/2), (size/2)) :
+for x in range(int(-(size/2)), int(size/2)) :
+    for y in range(int(-(size/2)), int(size/2)) :
         lattice[(x,y)] = 0
 
 #Set (0,0) to "visited"
@@ -26,26 +26,28 @@ while(contin) :
     #check left
     x = curx - 1
     y = cury
-    if lattice[(x,y)] == 0 :
-        moves.append((x,y))
+    if (x,y) in lattice :
+        if lattice[(x,y)] == 0 :
+            moves.append((x,y))
 
     #check right
     x = curx + 1
-    y = cury
-    if lattice[(x,y)] == 0 :
-        moves.append((x,y))
+    if (x,y) in lattice :
+        if lattice[(x,y)] == 0 :
+            moves.append((x,y))
 
     #check up
     x = curx
     y = cury + 1
-    if lattice[(x,y)] == 0 :
-        moves.append((x,y))
+    if (x,y) in lattice :
+        if lattice[(x,y)] == 0 :
+            moves.append((x,y))
 
     #check down
-    x = curx
     y = cury - 1
-    if lattice[(x,y)] == 0 :
-        moves.append((x,y))
+    if (x,y) in lattice :
+        if lattice[(x,y)] == 0 :
+            moves.append((x,y))
 
     if moves == [] :
         contin = False
@@ -60,6 +62,9 @@ while(contin) :
 
     #mark it as visited
     lattice[move] = 1
+    
+    print(move)
+    
 
 
 

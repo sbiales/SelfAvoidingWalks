@@ -62,3 +62,6 @@ while(contin) :
     steps = steps - 1
 
     print(move)
+
+length = 5000 - steps
+print(length, " steps taken")

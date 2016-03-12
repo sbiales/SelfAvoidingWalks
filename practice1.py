@@ -7,6 +7,7 @@ import random
 size = 100
 lattice = {}
 contin = True
+length = 0
 
 #Initialize all locations on lattice to "unvisited"
 for x in range(int(-(size/2)), int(size/2)) :
@@ -15,6 +16,7 @@ for x in range(int(-(size/2)), int(size/2)) :
 
 #Set (0,0) to "visited"
 lattice[(0,0)] = 1
+length += 1
 
 curx = 0
 cury = 0
@@ -62,9 +64,11 @@ while(contin) :
 
     #mark it as visited
     lattice[move] = 1
+    length += 1
     
     print(move)
-    
+
+print(length, " steps taken")
 
 
 

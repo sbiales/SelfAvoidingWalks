@@ -1,6 +1,7 @@
 #self avoiding random walk of 5000 steps, no border constraints
 
 import random
+import statistics
 
 iterations = 10
 distances = []
@@ -82,6 +83,32 @@ while (remaining > 0) :
     remaining -= 1
     distance = abs(0-curx) + abs(0-cury)
     size = (maxx-minx)*(maxy-miny)
+    distances.append(distance)
+    sizes.append(size)
 
     print("Iteration #", (iterations-remaining), "\t : Distance ", distance, ", Lattice size ", size)
+
+#calculations
+
+#averages
+distMean = statistics.mean(distances)
+sizeMean = statistics.mean(sizes)
+
+#median
+distMed = statistics.median(distances)
+sizeMed = statistics.median(sizes)
+
+#variance
+distVar = statistics.variance(distances)
+sizeVar = statistics.variance(sizes)
+
+#standard deviation
+distStd = statistics.stdev(distances)
+sizeStd = statistics.stdev(sizes)
+
+print("Distance: Mean {:.2f}; Median {:.2f}; Variance {:.2f}; Standard dev {:.2f}" .format(distMean, distMed, distVar,  distStd))
+print("Lattice size: Mean {:.2f}; Median {:.2f}; Variance {:.2f}; Standard dev {:.2f}" .format(sizeMean, sizeMed, sizeVar,  sizeStd))
+
+
+
 

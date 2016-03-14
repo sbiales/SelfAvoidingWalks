@@ -11,7 +11,7 @@ distanceList = []       # List holding the distances from starting point for eac
 latticeSizeList = []    # List holding the lattice sizes for each simulation
 
 # Run 10 simulations
-for i in range(1, 10):
+for i in range(0, 10):
     lattice =  []		# Initialize the lattice as an empty list of points visited
     length = 0		    # Length of a single walk, used as a control variable
 
@@ -27,8 +27,8 @@ for i in range(1, 10):
     while(length <= 5000) :
         moves = []		#Create a list of the available next moves, which is initially empty
 
-        # x and y denote temporary positions in the lattice that we'll use to check if the position next to us is available
-        # First check to see if this is a valid position (it's in the lattice)
+        # x and y denote temporary positions that we can check to see if they're available
+        # First check to see if this is an unvisited position (it's not in the lattice yet)
         # Then if this position is unvisited, add this position as a tuple to the list of available moves
 
         #check left

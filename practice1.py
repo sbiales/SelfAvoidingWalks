@@ -9,7 +9,7 @@ lengthList = []		# List holding walk lengths for each simulation
 size = 1000 		# Size of lattice, used to initialize lattice
 
 # Run 100 simulations
-for i in range(1, 100):
+for i in range(0, 100):
     lattice = {}		# Initialize the lattice as an empty dictionary
     contin = True		# Control variable for while loop
     length = 0		# Length of walk

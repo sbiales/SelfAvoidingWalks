@@ -4,7 +4,7 @@
 # max of 5000 steps
 
 import random
-import numpy
+import statistics
 
 lengthList = []		    # List holding walk lengths for each simulation
 distanceList = []       # List holding the distances from starting point for each simulation
@@ -102,12 +102,12 @@ for i in range(1, 10):
     # Now continue the for loop until all 100 iterations are done
 
 # Now that the 100 iterations are done, print the stats for distance and lattice size
-print("Mean distance:",numpy.mean(distanceList))
-print("Median distance:",numpy.median(distanceList))
-print("Variance for distance",numpy.var(distanceList))
-print("Standard deviation for distance",numpy.std(distanceList))
+print("Mean distance:",statistics.mean(distanceList))
+print("Median distance:",statistics.median(distanceList))
+print("Variance for distance",statistics.variance(distanceList))
+print("Standard deviation for distance",statistics.stdev(distanceList))
 
-print("Mean lattice size:",numpy.mean(latticeSizeList))
-print("Median lattice size:",numpy.median(latticeSizeList))
-print("Variance for lattice size",numpy.var(latticeSizeList))
-print("Standard deviation for lattice size",numpy.std(latticeSizeList))
+print("Mean lattice size:",statistics.mean(latticeSizeList))
+print("Median lattice size:",statistics.median(latticeSizeList))
+print("Variance for lattice size",statistics.variance(latticeSizeList))
+print("Standard deviation for lattice size",statistics.stdev(latticeSizeList))

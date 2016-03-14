@@ -71,7 +71,6 @@ for i in range(1, 10):
             lattice.append(move)
             length += 1			# Since we moved to that position, increment the length of the walk
 
-            print("Chose position", move)	# Display the position we chose to move to
             # Continue with the while loop until there are no available moves
 
     # Now that this simulation is over, let's run some calculations and output stats about this walk
@@ -95,9 +94,7 @@ for i in range(1, 10):
     latticeSizeList.append(lattice_size)
 
     # Now print the stats for this walk
-    print("Walk length:", length)
-    print("Distance in this walk:", distance)
-    print("Lattice size in this walk:", lattice_size)
+    print("Iteration #", i, "\t : Distance ", distance, ", Lattice size ", lattice_size)
 
     # Now continue the for loop until all 100 iterations are done
 

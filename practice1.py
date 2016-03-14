@@ -6,7 +6,7 @@ import random
 import numpy
 
 lengthList = []		# List holding walk lengths for each simulation
-size = 100		# Size of lattice, used to initialize lattice
+size = 1000		# Size of lattice, used to initialize lattice
 
 # Run 100 simulations
 for i in range(1, 100):
@@ -87,5 +87,6 @@ for i in range(1, 100):
     lengthList.append(length)
     # Now continue the for loop until all 100 iterations are done
 
-# Now that the 100 iterations are done, print the mean of the lengths of those walk lengths 
-print(numpy.mean(lengthList))
+# Now that the 100 iterations are done, print the mean and st.dev. of the lengths of those walk lengths
+print("The mean number of steps is",numpy.mean(lengthList))
+print("The standard deviation for the number of steps is",numpy.std(lengthList))

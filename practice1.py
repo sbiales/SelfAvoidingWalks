@@ -3,10 +3,10 @@
 #simulation stops when walker is trapped (ie all directions visited or border)
 
 import random
-import numpy
+import statistics
 
 lengthList = []		# List holding walk lengths for each simulation
-size = 1000		# Size of lattice, used to initialize lattice
+size = 1000 		# Size of lattice, used to initialize lattice
 
 # Run 100 simulations
 for i in range(1, 100):
@@ -77,7 +77,7 @@ for i in range(1, 100):
             lattice[move] = 1
             length += 1			# Since we moved to that position, increment the length of the walk
 
-    print("Chose position", move)	# Display the position we chose to move to
+    # print("Chose position", move)	# Display the position we chose to move to
     # Continue with the while loop until there are no available moves
 
     # Now that are no available moves left, output the length of the walk
@@ -88,5 +88,5 @@ for i in range(1, 100):
     # Now continue the for loop until all 100 iterations are done
 
 # Now that the 100 iterations are done, print the mean and st.dev. of the lengths of those walk lengths
-print("The mean number of steps is",numpy.mean(lengthList))
-print("The standard deviation for the number of steps is",numpy.std(lengthList))
+print("The mean number of steps is",statistics.mean(lengthList))
+print("The standard deviation for the number of steps is",statistics.stdev(lengthList))

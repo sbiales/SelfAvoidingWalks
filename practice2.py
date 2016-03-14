@@ -99,12 +99,15 @@ for i in range(1, 10):
     # Now continue the for loop until all 100 iterations are done
 
 # Now that the 100 iterations are done, print the stats for distance and lattice size
-print("Mean distance:",statistics.mean(distanceList))
-print("Median distance:",statistics.median(distanceList))
-print("Variance for distance",statistics.variance(distanceList))
-print("Standard deviation for distance",statistics.stdev(distanceList))
+# Now that the 100 iterations are done, calculate and print the stats for distance and lattice size
+distMean = statistics.mean(distanceList)
+distMed = statistics.median(distanceList)
+distVar = statistics.variance(distanceList)
+distStd = statistics.stdev(distanceList)
 
-print("Mean lattice size:",statistics.mean(latticeSizeList))
-print("Median lattice size:",statistics.median(latticeSizeList))
-print("Variance for lattice size",statistics.variance(latticeSizeList))
-print("Standard deviation for lattice size",statistics.stdev(latticeSizeList))
+sizeMean = statistics.mean(latticeSizeList)
+sizeMed = statistics.median(latticeSizeList)
+sizeVar = statistics.variance(latticeSizeList)
+sizeStd = statistics.stdev(latticeSizeList)
+print("Distance: Mean {:.2f}; Median {:.2f}; Variance {:.2f}; Standard dev {:.2f}" .format(distMean, distMed, distVar,  distStd))
+print("Lattice size: Mean {:.2f}; Median {:.2f}; Variance {:.2f}; Standard dev {:.2f}" .format(sizeMean, sizeMed, sizeVar,  sizeStd))

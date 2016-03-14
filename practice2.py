@@ -57,7 +57,6 @@ for i in range(1, 10):
         if moves == [] :			# If there are no available moves then, we quit
             print("No more available moves")
             break
-            #continue
 
         else :				# If there are indeed available moves, choose one at random
             #choose one move at random
@@ -98,7 +97,6 @@ for i in range(1, 10):
 
     # Now continue the for loop until all 100 iterations are done
 
-# Now that the 100 iterations are done, print the stats for distance and lattice size
 # Now that the 100 iterations are done, calculate and print the stats for distance and lattice size
 distMean = statistics.mean(distanceList)
 distMed = statistics.median(distanceList)
